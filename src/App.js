@@ -4,6 +4,7 @@ import { auth } from './Firebase-Config';
 
 //components
 import { Auth } from './Components/Auth';
+import { Chat } from './Components/Chat';
 
 //Cookies
 import Cookies from "universal-cookie";
@@ -25,7 +26,9 @@ function App() {
 
   return (
     <div className='container'> 
-      { room ? (<div>chat</div>) : (
+      { room ? (
+        <Chat room={room} />
+      ) : (
         <div className='room'>
         <label>Enter Room Name :</label>
         <input ref={roomInputRef} />
