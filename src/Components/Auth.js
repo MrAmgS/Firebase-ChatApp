@@ -1,6 +1,8 @@
 import { auth, provider } from "../Firebase-Config";
 import { signInWithPopup } from "firebase/auth";
 
+//styles
+import styles from './Styles/Auth.module.css'
 
 //cookies
 import Cookie from "universal-cookie";
@@ -22,9 +24,9 @@ export const Auth = ({setIsAuth}) => {
   };
 
   return (
-    <div >
+    <div className={styles.auth} >
       <p>Sign in with Google to continue</p>
-      <div >
+      <div className={styles.signInButton}>
       <img src={googleIcon} />
       <button onClick={signInWithGoogle}>Sign in with Google</button>
       </div>
