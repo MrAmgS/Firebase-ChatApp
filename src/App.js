@@ -24,9 +24,9 @@ function App() {
   }
 
   return (
-    <div> 
+    <div className='container'> 
       { room ? (<div>chat</div>) : (
-        <div>
+        <div className='room'>
         <label>Enter Room Name :</label>
         <input ref={roomInputRef} />
         <button onClick={() => setRoom(roomInputRef.current.value)}>
