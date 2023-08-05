@@ -10,6 +10,9 @@ import {
 } from "firebase/firestore";
 import { auth, db } from "../Firebase-Config";
 
+//styles
+import styles from './Styles/Chat.module.css'
+
 
 
 export const Chat = ({ room }) => {
@@ -49,26 +52,27 @@ export const Chat = ({ room }) => {
   };
 
   return (
-    <div>
-      <div >
+    <div className={styles.chatApp}>
+      <div className={styles.header} >
         <h1>Welcome to: {room.toUpperCase()}'s room</h1>
       </div>
-      <div >
+      <div className={styles.messages} >
         {massages.map((massage) => (
-          <div >
+          <div className={(auth.currentUser.displayName === massage.user) ? styles.myMessage : styles.othersMessage }>
             <span>{massage.user.toUpperCase()} :  </span>
             <br />
             {massage.text}
           </div>
         ))}
       </div>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className={styles.newMessageForm}>
         <input
+        className={styles.newMessageInput}
           placeholder="Type your massage here"
           onChange={(e) => setNewMassage(e.target.value)}
           value={newMassage}
         />
-        <button type="submit">
+        <button type="submit" className={styles.sendButton}>
          send
         </button>
       </form>
