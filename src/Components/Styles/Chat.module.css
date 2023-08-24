@@ -119,7 +119,7 @@
 
 @media (max-width:550px) {
   .chatApp {
-    width: 90vw;
+    width: 99vw;
   }
   .header {
     font-size: 0.7rem;
@@ -128,7 +128,7 @@
   .othersMessage , .myMessage {
     font-size: 1.1rem ;
     font-weight: 500;
-    width: 40vw;
+    width: 44vw;
   }
   .myMessage span , .othersMessage span {
     font-size: 1.1rem ;
