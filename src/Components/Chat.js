@@ -64,6 +64,10 @@ export const Chat = ({ room }) => {
             {massage.text}
           </div>
         ))}
+        <br/>
+        <br/>
+        <br/>
+        <br/>
       </div>
       <form onSubmit={handleSubmit} className={styles.newMessageForm}>
         <input

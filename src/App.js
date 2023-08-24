@@ -3,6 +3,9 @@ import "./App.css";
 import { auth } from "./Firebase-Config";
 import { signOut } from "firebase/auth";
 
+//Icon
+import signOutLogo from './assets/sign-out.svg';
+
 //components
 import { Auth } from "./Components/Auth";
 import { Chat } from "./Components/Chat";
@@ -10,6 +13,7 @@ import { Chat } from "./Components/Chat";
 //Cookies
 import Cookies from "universal-cookie";
 const cookies = new Cookies();
+
 
 function App() {
   const [isAuth, setIsAuth] = useState(cookies.get("auth-token"));
@@ -46,7 +50,7 @@ function App() {
         </div>
       )}
       <div className="sign-out">
-        <button onClick={signUserOut}> Sign out</button>
+        <button onClick={signUserOut}> <img src={signOutLogo} /></button>
       </div>
     </div>
   );

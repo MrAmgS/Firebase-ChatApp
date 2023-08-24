@@ -68,20 +68,41 @@ body {
   display: flex;
   justify-content: center;
   margin: 40px auto;
-  position: fixed;
-  right: 50px;
-  bottom: 20px;
+  position:fixed;
+  right: 20px;
+  bottom: -20px;
+  transition: all 1s ease-in;
 }
 
 .sign-out button {
-  width: 100px;
-  height: 30px;
+  width: 45px;
+  height: 45px;
   border: none;
   background-color: #3b5998;
   color: #fff;
   font-size: 15px;
   font-weight: 500;
   color: aliceblue;
-  border-radius: 10px;
+  border-radius: 50%;
   cursor: pointer;
+  overflow: hidden; 
+}
+
+.sign-out img {
+  width: 30px;
+}
+
+@media (max-width : 550px) {
+  .sign-out {
+    right: 30px;
+    top: -5px;
+  }
+  .sign-out button {
+    background-color: #FF5714;
+    width: 30px;
+    height: 30px;
+  }
+  .sign-out img {
+    width: 20px;
+  }
 }
